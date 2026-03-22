@@ -7,7 +7,7 @@ export const profile = {
   resumeHref: "/Somil_Sharma_Resume.pdf",
   role: "Frontend Engineer",
   summary:
-    "I am a frontend engineer who likes building fast, reliable product experiences. Most of my work has been on user-facing flows that affect revenue, growth, or everyday product quality.",
+    "I build fast, reliable product experiences with a strong focus on usability, performance, and business impact. Most of my work has been on user-facing flows that influence revenue, growth, or overall product quality.",
 } as const;
 
 export const navigation = [
@@ -98,6 +98,7 @@ export const achievements = [
 export const education = {
   school: "BITS Pilani",
   degree: "Integrated Bachelor's and Master's degree",
+  subject: "Physics",
   eyebrow: "Education",
   description:
     "Integrated Bachelor's and Master's degree.",

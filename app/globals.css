@@ -238,6 +238,7 @@ li {
   border-radius: var(--radius-xl);
   background: var(--bg-elevated);
   backdrop-filter: blur(16px);
+  scroll-margin-top: 120px;
 }
 
 .section-heading {

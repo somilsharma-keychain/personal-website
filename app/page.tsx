@@ -50,8 +50,8 @@ export default function Home() {
         <div className="systems-stack">
           <article className="system-card">
             <div>
-              <p className="system-card__eyebrow">Degree</p>
-              <h3>{education.degree}</h3>
+              <p className="system-card__eyebrow">Major</p>
+              <h3>{education.subject}</h3>
             </div>
 
             <ul>
@@ -102,7 +102,7 @@ export default function Home() {
           <SectionHeading
             eyebrow="Build"
             title="How I built this site"
-            description="Since this is my own portfolio, I wanted the build details and performance numbers to be visible too."
+            description=""
           />
 
           <div className="stack-groups">
@@ -123,7 +123,6 @@ export default function Home() {
           <article className="timeline-item">
             <span>Footprint</span>
             <h3>What the build looks like</h3>
-            <p>{siteMetrics.bundleSummary}</p>
             <div className="score-grid">
               {siteMetrics.bundleStats.map((metric) => (
                 <div key={metric.label} className="score-chip">
@@ -137,7 +136,6 @@ export default function Home() {
           <article className="timeline-item">
             <span>Lighthouse</span>
             <h3>Latest Lighthouse results</h3>
-            <p>{siteMetrics.auditSummary}</p>
             <div className="score-grid">
               {siteMetrics.lighthouseCategories.map((category) => (
                 <div key={category.label} className="score-chip">
