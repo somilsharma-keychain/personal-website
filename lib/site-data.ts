@@ -1,6 +1,6 @@
 export const profile = {
   name: "Somil Sharma",
-  location: "Dehradun, India",
+  location: "Gurgaon, India",
   phone: "+91-8171876285",
   email: "iamsomilsharma@gmail.com",
   linkedin: "https://in.linkedin.com/in/somil-sharma-bits-pilani",
