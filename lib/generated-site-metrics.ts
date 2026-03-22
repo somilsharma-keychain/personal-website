@@ -1,6 +1,6 @@
 export const siteMetrics = {
-  "bundleSummary": "Automatically regenerated from the production build output using gzip-compressed asset sizes for the route and shared bundles.",
-  "auditSummary": "Latest Lighthouse audit: 2026-03-22, measured against a local production build in headless Chrome.",
+  "bundleSummary": "These numbers are pulled from the production build and shown as gzip-compressed asset sizes.",
+  "auditSummary": "Last Lighthouse run: 2026-03-22. Measured on a local production build in headless Chrome.",
   "bundleStats": [
     {
       "label": "First-load JS",

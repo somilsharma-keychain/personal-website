@@ -7,7 +7,7 @@ export const profile = {
   resumeHref: "/Somil_Sharma_Resume.pdf",
   role: "Frontend Engineer",
   summary:
-    "Frontend engineer building revenue-critical product surfaces with strong architecture, measurable performance improvements, and a bias for shipping real business impact.",
+    "I am a frontend engineer who likes building fast, reliable product experiences. Most of my work has been on user-facing flows that affect revenue, growth, or everyday product quality.",
 } as const;
 
 export const navigation = [
@@ -27,21 +27,21 @@ export const heroStats = [
 export const principles = [
   {
     index: "01",
-    title: "I optimize for business outcomes, not just pretty UI",
+    title: "I like frontend work that moves the business",
     description:
-      "From payments flows at smallcase to image tooling at Keychain, I focus on frontend work that moves revenue, usage, and product quality in measurable ways.",
+      "A lot of my work has been on flows that actually matter to the company, from payments at smallcase to image tooling at Keychain.",
   },
   {
     index: "02",
-    title: "Architecture matters once the product gets real",
+    title: "Good frontend needs structure",
     description:
-      "I enjoy refactoring complex codebases, shaping reusable frontend systems, and creating implementation patterns that stay readable under growth.",
+      "I enjoy refactoring messy code, building reusable patterns, and making frontend codebases easier to work in as products grow.",
   },
   {
     index: "03",
-    title: "Frontend quality includes leadership",
+    title: "I care about the team side too",
     description:
-      "I collaborate across functions, drive SEO workstreams, and manage interns while keeping engineering standards high and delivery practical.",
+      "Along with shipping code, I have worked closely with other teams, handled SEO work, and managed interns.",
   },
 ] as const;
 
@@ -129,8 +129,8 @@ export const education = {
 } as const;
 
 export const buildHighlights = [
-  "Resume download attached directly to the site",
-  "App Router with static prerendered homepage",
-  "Engineering-focused content architecture in typed data modules",
-  "Light theme with neutral gradients, reduced paint cost, and responsive sections",
+  "Resume attached directly to the site",
+  "App Router with a statically rendered homepage",
+  "Content kept in typed data files so updates stay easy",
+  "Light theme, responsive layout, and lighter visual effects",
 ] as const;

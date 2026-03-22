@@ -43,7 +43,7 @@ export default function Home() {
             <br />
             builds frontend
             <br />
-            with product impact.
+            that holds up in production.
           </h1>
           <p className="hero-role">{profile.role}</p>
           <p className="hero-text">{profile.summary}</p>
@@ -71,9 +71,9 @@ export default function Home() {
               <span>Current role</span>
               <strong>Frontend Engineer at Keychain</strong>
               <p>
-                Shipping product features, leading SEO-related execution, and
-                building frontend experiences that directly affect user behavior
-                on the platform.
+                I work on product features, lead some SEO-related work, and
+                build frontend experiences that directly affect how people use
+                the platform.
               </p>
             </div>
 
@@ -91,9 +91,8 @@ export default function Home() {
               <span>Education</span>
               <strong>{education.school}</strong>
               <p>
-                {education.degree}. The career story here already shows a fast
-                progression from internships into revenue-critical frontend
-                ownership.
+                {education.degree}. My career moved pretty quickly from
+                internships into owning important product work.
               </p>
             </div>
           </div>
@@ -112,8 +111,8 @@ export default function Home() {
       <section id="principles" className="content-section">
         <SectionHeading
           eyebrow="Approach"
-          title="Frontend engineering with a business lens"
-          description="Your resume already reads like a frontend engineer who gets trusted with meaningful surfaces early. This section turns that into a sharper product-engineering point of view."
+          title="How I usually think about frontend work"
+          description="I have mostly worked on product surfaces where frontend decisions have a real effect on revenue, growth, or day-to-day product quality."
         />
 
         <div className="principles-grid">
@@ -130,8 +129,8 @@ export default function Home() {
       <section id="experience" className="content-section">
         <SectionHeading
           eyebrow="Experience"
-          title="Fast progression across product-focused frontend roles"
-          description="The story here is strong: internships with visible outcomes, then ownership of revenue-critical and user-critical surfaces at scale."
+          title="Work I have done so far"
+          description="I started with internships, picked up product ownership early, and ended up working on flows with real business impact."
         />
 
         <div className="systems-stack">
@@ -165,8 +164,8 @@ export default function Home() {
         <div className="stack-panel">
           <SectionHeading
             eyebrow="Build"
-            title="How this website is engineered"
-            description="The site itself is meant to reflect frontend engineering taste, so the stack and performance signals are visible instead of hidden."
+            title="How I built this site"
+            description="Since this is my own portfolio, I wanted the build details and performance numbers to be visible too."
           />
 
           <div className="stack-groups">
@@ -194,7 +193,7 @@ export default function Home() {
         <div className="timeline-panel">
           <article className="timeline-item">
             <span>Footprint</span>
-            <h3>Build-level efficiency signals</h3>
+            <h3>What the build looks like</h3>
             <p>{siteMetrics.bundleSummary}</p>
             <div className="score-grid">
               {siteMetrics.bundleStats.map((metric) => (
@@ -208,7 +207,7 @@ export default function Home() {
 
           <article className="timeline-item">
             <span>Lighthouse</span>
-            <h3>Local performance indicators</h3>
+            <h3>Latest Lighthouse results</h3>
             <p>{siteMetrics.auditSummary}</p>
             <div className="score-grid">
               {siteMetrics.lighthouseCategories.map((category) => (
@@ -242,10 +241,10 @@ export default function Home() {
 
       <section id="contact" className="content-section contact-section">
         <p className="eyebrow">Contact</p>
-        <h2>Available for ambitious frontend work.</h2>
+        <h2>Open to good frontend work.</h2>
         <p>
-          Based in {profile.location}. Reach out for frontend engineering roles,
-          product-focused collaborations, or high-performance interface work.
+          Based in {profile.location}. Reach out if you are hiring for frontend
+          roles or just want to talk product and engineering.
         </p>
         <div className="hero-meta hero-meta-centered">
           <a href={`mailto:${profile.email}`}>{profile.email}</a>

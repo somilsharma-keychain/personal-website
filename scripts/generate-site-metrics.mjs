@@ -46,9 +46,9 @@ const lighthouse = fs.existsSync(reportPath)
 
 const siteMetrics = {
   bundleSummary:
-    "Automatically regenerated from the production build output using gzip-compressed asset sizes for the route and shared bundles.",
+    "These numbers are pulled from the production build and shown as gzip-compressed asset sizes.",
   auditSummary: lighthouse.generatedAt
-    ? `Latest Lighthouse audit: ${lighthouse.generatedAt}, measured against a local production build in headless Chrome.`
+    ? `Last Lighthouse run: ${lighthouse.generatedAt}. Measured on a local production build in headless Chrome.`
     : lighthouse.environment,
   bundleStats: [
     { label: "First-load JS", value: formatKilobytes(sharedJsBytes + homeRouteBytes) },
