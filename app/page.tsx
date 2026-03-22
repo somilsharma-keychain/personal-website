@@ -7,9 +7,7 @@ import {
   buildHighlights,
   education,
   experiences,
-  heroStats,
   navigation,
-  principles,
   profile,
   stackGroups,
 } from "@/lib/site-data";
@@ -23,7 +21,6 @@ export default function Home() {
       <header className="site-header">
         <Link href="/" className="brand-mark" aria-label="Homepage">
           <span className="brand-mark__dot" />
-          <span>{profile.name} / Frontend Engineering</span>
         </Link>
 
         <nav className="site-nav" aria-label="Primary">
@@ -38,91 +35,32 @@ export default function Home() {
       <section className="hero">
         <div className="hero-copy">
           <p className="eyebrow">{profile.location}</p>
-          <h1>
-            {profile.name}
-            <br />
-            builds frontend
-            <br />
-            that holds up in production.
-          </h1>
+          <h1>{profile.name}</h1>
           <p className="hero-role">{profile.role}</p>
           <p className="hero-text">{profile.summary}</p>
-
-          <div className="hero-meta">
-            <a href={`mailto:${profile.email}`}>{profile.email}</a>
-            <a href={profile.linkedin} target="_blank" rel="noreferrer">
-              LinkedIn
-            </a>
-          </div>
-
-          <div className="hero-actions">
-            <a href="#experience" className="button button-primary">
-              View experience
-            </a>
-            <a href={profile.resumeHref} className="button button-secondary" download>
-              Download resume
-            </a>
-          </div>
-        </div>
-
-        <div className="hero-panel" aria-label="Engineering overview">
-          <div className="panel-grid">
-            <div className="panel-card panel-card-large">
-              <span>Current role</span>
-              <strong>Frontend Engineer at Keychain</strong>
-              <p>
-                I work on product features, lead some SEO-related work, and
-                build frontend experiences that directly affect how people use
-                the platform.
-              </p>
-            </div>
-
-            <div className="panel-card">
-              <span>Recent impact</span>
-              <strong>40% of image uploads flow through my cropping work</strong>
-            </div>
-
-            <div className="panel-card">
-              <span>Revenue signal</span>
-              <strong>Built payments UX behind 65% of revenue at smallcase</strong>
-            </div>
-
-            <div className="panel-card panel-card-tall">
-              <span>Education</span>
-              <strong>{education.school}</strong>
-              <p>
-                {education.degree}. My career moved pretty quickly from
-                internships into owning important product work.
-              </p>
-            </div>
-          </div>
         </div>
       </section>
 
-      <section className="impact-strip">
-        {heroStats.map((stat) => (
-          <article key={stat.label} className="impact-card">
-            <strong>{stat.value}</strong>
-            <span>{stat.label}</span>
-          </article>
-        ))}
-      </section>
-
-      <section id="principles" className="content-section">
+      <section id="education" className="content-section">
         <SectionHeading
-          eyebrow="Approach"
-          title="How I usually think about frontend work"
-          description="I have mostly worked on product surfaces where frontend decisions have a real effect on revenue, growth, or day-to-day product quality."
+          eyebrow={education.eyebrow}
+          title={education.school}
+          description={education.description}
         />
 
-        <div className="principles-grid">
-          {principles.map((principle) => (
-            <article key={principle.index} className="principle-card">
-              <span>{principle.index}</span>
-              <h3>{principle.title}</h3>
-              <p>{principle.description}</p>
-            </article>
-          ))}
+        <div className="systems-stack">
+          <article className="system-card">
+            <div>
+              <p className="system-card__eyebrow">Degree</p>
+              <h3>{education.degree}</h3>
+            </div>
+
+            <ul>
+              {achievements.map((achievement) => (
+                <li key={achievement}>{achievement}</li>
+              ))}
+            </ul>
+          </article>
         </div>
       </section>
 
@@ -226,16 +164,6 @@ export default function Home() {
             </ul>
           </article>
 
-          <article className="timeline-item">
-            <span>Background</span>
-            <h3>{education.school}</h3>
-            <p>{education.degree}</p>
-            <ul className="achievement-list">
-              {achievements.map((achievement) => (
-                <li key={achievement}>{achievement}</li>
-              ))}
-            </ul>
-          </article>
         </div>
       </section>
 

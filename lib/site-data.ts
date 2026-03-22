@@ -11,38 +11,10 @@ export const profile = {
 } as const;
 
 export const navigation = [
-  { label: "Approach", href: "#principles" },
+  { label: "Education", href: "#education" },
   { label: "Experience", href: "#experience" },
   { label: "Build", href: "#build" },
   { label: "Contact", href: "#contact" },
-] as const;
-
-export const heroStats = [
-  { label: "Image upload impact", value: "40%" },
-  { label: "Revenue contribution", value: "65%" },
-  { label: "Team leadership", value: "2 interns" },
-  { label: "Top compensation jump", value: "150%" },
-] as const;
-
-export const principles = [
-  {
-    index: "01",
-    title: "I like frontend work that moves the business",
-    description:
-      "A lot of my work has been on flows that actually matter to the company, from payments at smallcase to image tooling at Keychain.",
-  },
-  {
-    index: "02",
-    title: "Good frontend needs structure",
-    description:
-      "I enjoy refactoring messy code, building reusable patterns, and making frontend codebases easier to work in as products grow.",
-  },
-  {
-    index: "03",
-    title: "I care about the team side too",
-    description:
-      "Along with shipping code, I have worked closely with other teams, handled SEO work, and managed interns.",
-  },
 ] as const;
 
 export const experiences = [
@@ -126,6 +98,9 @@ export const achievements = [
 export const education = {
   school: "BITS Pilani",
   degree: "Integrated Bachelor's and Master's degree",
+  eyebrow: "Education",
+  description:
+    "Integrated Bachelor's and Master's degree.",
 } as const;
 
 export const buildHighlights = [
