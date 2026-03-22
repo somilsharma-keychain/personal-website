@@ -4,7 +4,6 @@ import { SectionHeading } from "@/components/section-heading";
 import { siteMetrics } from "@/lib/generated-site-metrics";
 import {
   achievements,
-  buildHighlights,
   education,
   experiences,
   navigation,
@@ -116,14 +115,6 @@ export default function Home() {
                   ))}
                 </ul>
               </article>
-            ))}
-          </div>
-
-          <div className="build-highlights">
-            {buildHighlights.map((highlight) => (
-              <div key={highlight} className="build-highlight">
-                {highlight}
-              </div>
             ))}
           </div>
         </div>

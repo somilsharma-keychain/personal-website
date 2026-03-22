@@ -82,7 +82,7 @@ export const stackGroups = [
   },
   {
     label: "Interface System",
-    items: ["Custom CSS", "Responsive layout", "Semantic HTML", "Resume download"],
+    items: ["Custom CSS", "Responsive layout", "Semantic HTML"],
   },
   {
     label: "Engineering Tooling",
@@ -102,10 +102,3 @@ export const education = {
   description:
     "Integrated Bachelor's and Master's degree.",
 } as const;
-
-export const buildHighlights = [
-  "Resume attached directly to the site",
-  "App Router with a statically rendered homepage",
-  "Content kept in typed data files so updates stay easy",
-  "Light theme, responsive layout, and lighter visual effects",
-] as const;
