@@ -1,0 +1,36 @@
+{
+  "name": "personal-website",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "pnpm build:compile && pnpm metrics:refresh && pnpm build:compile",
+    "build:compile": "next build",
+    "analyze": "ANALYZE=true next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "metrics:refresh": "node scripts/generate-site-metrics.mjs",
+    "perf:audit": "node scripts/run-lighthouse.mjs",
+    "metrics:update": "pnpm build:compile && pnpm perf:audit && pnpm metrics:refresh && pnpm build:compile"
+  },
+  "dependencies": {
+    "next": "14.2.22",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@next/bundle-analyzer": "^16.2.1",
+    "@types/node": "^20.17.30",
+    "@types/react": "^18.3.21",
+    "@types/react-dom": "^18.3.7",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "14.2.22",
+    "lighthouse": "^13.0.3",
+    "typescript": "^5.8.3"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "packageManager": "pnpm@10.15.0"
+}

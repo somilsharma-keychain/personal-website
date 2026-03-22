@@ -1,0 +1,44 @@
+{
+  "generatedAt": "2026-03-22",
+  "environment": "Local production build audited in headless Chrome",
+  "categories": [
+    {
+      "label": "Performance",
+      "value": "100"
+    },
+    {
+      "label": "Accessibility",
+      "value": "100"
+    },
+    {
+      "label": "Best Practices",
+      "value": "96"
+    },
+    {
+      "label": "SEO",
+      "value": "100"
+    }
+  ],
+  "vitals": [
+    {
+      "label": "First Contentful Paint",
+      "value": "0.8 s"
+    },
+    {
+      "label": "Largest Contentful Paint",
+      "value": "1.7 s"
+    },
+    {
+      "label": "Speed Index",
+      "value": "0.8 s"
+    },
+    {
+      "label": "Total Blocking Time",
+      "value": "0 ms"
+    },
+    {
+      "label": "Cumulative Layout Shift",
+      "value": "0"
+    }
+  ]
+}

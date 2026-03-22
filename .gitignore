@@ -1,0 +1,9 @@
+.next
+node_modules
+dist
+out
+.DS_Store
+coverage
+*.log
+*.tsbuildinfo
+reports/lighthouse-report.json
