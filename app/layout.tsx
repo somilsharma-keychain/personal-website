@@ -5,7 +5,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Somil Sharma | Frontend Engineer",
   description:
-    "A BITS Pilani graduate working as a frontend engineer at Keychain.",
+    "BITS Pilani graduate, currently working as a frontend engineer at Keychain.",
   keywords: [
     "Somil Sharma",
     "Frontend Engineer",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Somil Sharma | Frontend Engineer",
     description:
-      "A BITS Pilani graduate working as a frontend engineer at Keychain.",
+      "BITS Pilani graduate, currently working as a frontend engineer at Keychain.",
     type: "website",
     locale: "en_IN",
   },
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Somil Sharma | Frontend Engineer",
     description:
-      "A BITS Pilani graduate working as a frontend engineer at Keychain.",
+      "BITS Pilani graduate, currently working as a frontend engineer at Keychain.",
   },
 };
 
