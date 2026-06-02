@@ -224,6 +224,7 @@ li {
 
 .principle-card p,
 .system-card p,
+.writing-card p,
 .timeline-item p,
 .contact-section p,
 .section-heading p {
@@ -372,6 +373,74 @@ li {
   color: var(--muted);
   font-family: "IBM Plex Mono", "SFMono-Regular", "SF Mono", Consolas, monospace;
   font-size: 0.85rem;
+}
+
+.writing-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+
+.writing-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  padding: 26px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+}
+
+.writing-card .score-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  width: 100%;
+  margin-top: 0;
+}
+
+@media (max-width: 760px) {
+  .writing-card .score-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.writing-card h3 a {
+  color: var(--text);
+}
+
+.writing-card h3 a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.pub-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.pub-link {
+  padding: 5px 12px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  color: var(--muted);
+  font-family: "IBM Plex Mono", "SFMono-Regular", "SF Mono", Consolas, monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  transition: border-color 160ms ease, color 160ms ease;
+}
+
+.pub-link:hover {
+  border-color: var(--accent-strong);
+  color: var(--text);
+}
+
+@media (max-width: 1120px) {
+  .writing-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .contact-section {

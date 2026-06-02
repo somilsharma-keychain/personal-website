@@ -7,7 +7,9 @@ import {
   education,
   experiences,
   navigation,
+  packages,
   profile,
+  publications,
   stackGroups,
 } from "@/lib/site-data";
 
@@ -148,6 +150,83 @@ export default function Home() {
                 </ul>
               </article>
             ))}
+          </div>
+        </section>
+
+        <section id="writing" className="content-section writing-section">
+          <SectionHeading
+            eyebrow="Writing"
+            title="Publications & Packages"
+            description="Things I have written and shipped publicly — articles on frontend craft and open-source tooling built from real production problems."
+          />
+
+          <div className="writing-grid">
+            <div className="writing-col">
+              <p className="eyebrow">Publications</p>
+              <div className="systems-stack">
+                {publications.map((pub) => (
+                  <article key={pub.title} className="writing-card">
+                    <div>
+                      <p className="system-card__eyebrow">{pub.eyebrow}</p>
+                      <h3>
+                        <a href={pub.doiHref} target="_blank" rel="noreferrer">
+                          {pub.title}
+                        </a>
+                        <span className="company-link"> — {pub.venue}</span>
+                      </h3>
+                      <p>{pub.description}</p>
+                    </div>
+                    <div className="pub-links">
+                      <a href={pub.doiHref} target="_blank" rel="noreferrer" className="pub-link">
+                        DOI
+                      </a>
+                      <a href={pub.replicationHref} target="_blank" rel="noreferrer" className="pub-link">
+                        Replication Package
+                      </a>
+                      {/* arXiv link pending endorsement — uncomment once live
+                      <a href="https://arxiv.org/abs/PLACEHOLDER" target="_blank" rel="noreferrer" className="pub-link">
+                        arXiv
+                      </a> */}
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div className="writing-col">
+              <p className="eyebrow">Packages</p>
+              <div className="systems-stack">
+                {packages.map((pkg) => (
+                  <article key={pkg.title} className="writing-card">
+                    <div>
+                      <p className="system-card__eyebrow">{pkg.eyebrow}</p>
+                      <h3>
+                        <a href={pkg.npmHref} target="_blank" rel="noreferrer">
+                          {pkg.title}
+                        </a>
+                      </h3>
+                      <p>{pkg.description}</p>
+                      <div className="pub-links">
+                        <a href={pkg.npmHref} target="_blank" rel="noreferrer" className="pub-link">
+                          npm
+                        </a>
+                        <a href={pkg.githubHref} target="_blank" rel="noreferrer" className="pub-link">
+                          GitHub
+                        </a>
+                      </div>
+                    </div>
+                    <div className="score-grid">
+                      {pkg.stats.map((stat) => (
+                        <div key={stat.label} className="score-chip">
+                          <strong>{stat.value}</strong>
+                          <span>{stat.label}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
           </div>
         </section>
 

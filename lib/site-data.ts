@@ -13,6 +13,7 @@ export const profile = {
 export const navigation = [
   { label: "Education", href: "#education" },
   { label: "Experience", href: "#experience" },
+  { label: "Writing", href: "#writing" },
   { label: "Build", href: "#build" },
   { label: "Contact", href: "#contact" },
 ] as const;
@@ -93,6 +94,36 @@ export const stackGroups = [
 export const achievements = [
   "Meta Frontend & App Professional Certification",
   "Scaler Frontend Certificate with 1st rank in a batch of 150 students",
+] as const;
+
+export const publications = [
+  {
+    eyebrow: "Preprint · 2026",
+    title: "Accessibility and Semantic Quality Regressions in AI-Assisted React Development: An Empirical Study",
+    venue: "Zenodo",
+    doiHref: "https://doi.org/10.5281/zenodo.20482307",
+    replicationHref: "https://github.com/SomilKSharma/ai-react-accessibility-study",
+    // arXivHref: pending Kästner's endorsement — uncomment once live
+    description:
+      "Empirical study measuring how AI coding tools (Cursor, Copilot) affect accessibility violations and code complexity in React/TypeScript projects. Uses difference-in-differences with Tobit regression across axe-core audits and AST analysis. Key finding: axe violations show no statistically significant increase attributable to AI assistance; document structure violations are the predominant category.",
+  },
+] as const;
+
+export const packages = [
+  {
+    eyebrow: "npm · Open Source",
+    title: "qualm-a11y",
+    npmHref: "https://www.npmjs.com/package/qualm-a11y",
+    githubHref: "https://github.com/SomilKSharma/qualm",
+    description:
+      "Static AST-level analyzer for LLM-generated React/TypeScript code. Implements the empirical accessibility quality taxonomy from Sharma (2026). Supports SARIF and JSON output for CI/CD pipelines, with a --research-mode flag aligned to the study's violation categories.",
+    stats: [
+      { label: "Version", value: "1.0.2" },
+      { label: "License", value: "MIT" },
+      { label: "Engine", value: "Node ≥18" },
+      { label: "CLI", value: "qualm-a11y" },
+    ],
+  },
 ] as const;
 
 export const education = {
