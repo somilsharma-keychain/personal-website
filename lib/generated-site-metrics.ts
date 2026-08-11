@@ -16,11 +16,11 @@ export const siteMetrics = {
     },
     {
       "label": "Route CSS",
-      "value": "2.3 kB"
+      "value": "2.4 kB"
     },
     {
       "label": "Resume asset",
-      "value": "87.8 kB"
+      "value": "4.8 kB"
     },
     {
       "label": "Rendering",

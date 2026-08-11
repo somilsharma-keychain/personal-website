@@ -10,6 +10,7 @@ import {
   packages,
   profile,
   publications,
+  skillGroups,
   stackGroups,
 } from "@/lib/site-data";
 
@@ -33,10 +34,10 @@ const structuredData = {
       email: profile.email,
       telephone: profile.phone,
       sameAs: [profile.linkedin],
-      alumniOf: {
+      alumniOf: education.map((entry) => ({
         "@type": "CollegeOrUniversity",
-        name: education.school,
-      },
+        name: entry.school,
+      })),
       homeLocation: {
         "@type": "Place",
         name: profile.location,
@@ -46,14 +47,9 @@ const structuredData = {
         name: experiences[0].company,
       },
       knowsAbout: [
-        "React",
-        "Next.js",
-        "TypeScript",
-        "HTML",
-        "CSS",
+        ...skillGroups.flatMap((group) => [...group.items]),
         "Frontend Architecture",
         "Web Performance",
-        "Technical SEO",
         "Accessibility",
       ],
       award: [...achievements],
@@ -96,26 +92,24 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="education" className="content-section">
+        <section id="skills" className="content-section">
           <SectionHeading
-            eyebrow={education.eyebrow}
-            title={education.school}
-            description={education.description}
+            eyebrow="Skills"
+            title="What I work with"
+            description="React, Next.js, and TypeScript day to day, plus enough backend and tooling to ship a feature end to end without waiting on anyone."
           />
 
-          <div className="systems-stack">
-            <article className="system-card">
-              <div>
-                <p className="system-card__eyebrow">Major</p>
-                <h3>{education.subject}</h3>
-              </div>
-
-              <ul>
-                {achievements.map((achievement) => (
-                  <li key={achievement}>{achievement}</li>
-                ))}
-              </ul>
-            </article>
+          <div className="skill-groups">
+            {skillGroups.map((group) => (
+              <article key={group.label} className="skill-card">
+                <span>{group.label}</span>
+                <ul className="skill-chips">
+                  {group.items.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </article>
+            ))}
           </div>
         </section>
 
@@ -123,7 +117,7 @@ export default function Home() {
           <SectionHeading
             eyebrow="Experience"
             title="Work I have done so far"
-            description="I started with internships, picked up product ownership early, and ended up working on flows with real business impact."
+            description="I started with internships, picked up product ownership early, and ended up building 0→1 products and flows with real business impact."
           />
 
           <div className="systems-stack">
@@ -150,6 +144,44 @@ export default function Home() {
                 </ul>
               </article>
             ))}
+          </div>
+        </section>
+
+        <section id="education" className="content-section">
+          <SectionHeading
+            eyebrow="Education"
+            title="Where I studied"
+            description="A physics background at BITS Pilani, a computer science master's, and certifications picked up along the way."
+          />
+
+          <div className="systems-stack">
+            {education.map((entry) => (
+              <article key={entry.school} className="system-card">
+                <div>
+                  <p className="system-card__eyebrow">{entry.eyebrow}</p>
+                  <h3>{entry.school}</h3>
+                </div>
+
+                <ul>
+                  {entry.details.map((detail) => (
+                    <li key={detail}>{detail}</li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+
+            <article className="system-card">
+              <div>
+                <p className="system-card__eyebrow">Certifications & Test Scores</p>
+                <h3>Credentials</h3>
+              </div>
+
+              <ul>
+                {achievements.map((achievement) => (
+                  <li key={achievement}>{achievement}</li>
+                ))}
+              </ul>
+            </article>
           </div>
         </section>
 
@@ -292,8 +324,9 @@ export default function Home() {
           <p className="eyebrow">Contact</p>
           <h2>Open to good frontend work.</h2>
           <p>
-            Based in {profile.location}. Reach out if you are hiring for frontend
-            roles or just want to talk product and engineering.
+            Based in {profile.location}, working with US-based teams. Reach out if
+            you are hiring for frontend roles or just want to talk product and
+            engineering.
           </p>
           <div className="hero-meta hero-meta-centered">
             <a href={`mailto:${profile.email}`}>{profile.email}</a>

@@ -1,21 +1,57 @@
 export const profile = {
   name: "Somil Sharma",
-  location: "Gurgaon, India",
+  location: "Dehradun, India",
   phone: "+91-8171876285",
   email: "iamsomilsharma@gmail.com",
   linkedin: "https://in.linkedin.com/in/somil-sharma-bits-pilani",
   resumeHref: "/Somil_Sharma_Resume.pdf",
   role: "Frontend Engineer",
   summary:
-    "I build fast, reliable product experiences with a strong focus on usability, performance, and business impact. Most of my work has been on user-facing flows that influence revenue, growth, or overall product quality.",
+    "Frontend engineer (React, Next.js, TypeScript) who builds 0→1 products at startup pace. I joined a US startup at ~30 engineers and shipped through its scale-up past 120, building its CRM from the ground up while working daily with US-based product, design, and GTM teams. Before that I built payment flows processing ~65% of revenue at a fintech. AI-native workflow, and I own web performance end to end.",
 } as const;
 
 export const navigation = [
-  { label: "Education", href: "#education" },
+  { label: "Skills", href: "#skills" },
   { label: "Experience", href: "#experience" },
+  { label: "Education", href: "#education" },
   { label: "Writing", href: "#writing" },
   { label: "Build", href: "#build" },
   { label: "Contact", href: "#contact" },
+] as const;
+
+export const skillGroups = [
+  {
+    label: "Languages",
+    items: ["TypeScript", "JavaScript (ES6+)", "HTML5", "CSS3", "Python", "Java"],
+  },
+  {
+    label: "Frontend",
+    items: [
+      "React",
+      "Next.js",
+      "Redux",
+      "Responsive design",
+      "Core Web Vitals",
+      "CrUX",
+      "Lighthouse",
+      "SEO",
+    ],
+  },
+  {
+    label: "Tools & Platforms",
+    items: [
+      "Node.js",
+      "NestJS",
+      "REST APIs",
+      "Git",
+      "Docker",
+      "AWS",
+      "Mixpanel",
+      "Claude Code",
+      "Jira",
+      "Linear",
+    ],
+  },
 ] as const;
 
 export const experiences = [
@@ -25,10 +61,14 @@ export const experiences = [
     title: "Frontend Engineer",
     href: "https://www.keychain.com",
     bullets: [
-      "Developed the image cropping workflow now driving 40% of image uploads on the platform.",
-      "Collaborate with cross-functional teams to ship high-impact features and product enhancements.",
-      "Manage two interns working on SEO-focused engineering projects.",
-      "Received a 150% bonus for exceptional performance.",
+      "Core engineer on Keychain's CRM, built from scratch: shipped the Accounts and Contacts modules end to end, including list views with search, filter, and sort, detail pages, and activity timelines mapping user relationships against a 100K+ company graph.",
+      "Built inline editing across the CRM's data tables (Accounts, Deals, Connections) with Excel-like cell editing, optimistic updates, rollback on failure, and full error handling.",
+      "Built automated Core Web Vitals monitoring (LCP, INP, CLS) on CrUX data with scheduled Node.js reporting and regression alerting, and used it to catch a production CLS regression.",
+      "Created a high-fidelity, resettable product demo environment for customer demos, with vertical-specific datasets, embedded routing, and feature-flag controls.",
+      "Work AI-first: maintain the team's Claude Code skills and claude.md conventions, and ran AI-driven spec validation across PRD, Gherkin, and Figma docs that surfaced 31 discrepancies before build.",
+      "Frequent first responder on P0 production incidents (broken table scrolling, missing activity timestamps, filter outages), resolving most within 24-48 hours, and ship across the stack in the NestJS backend when features need it.",
+      "Developed the platform's image-cropping flow, now used in ~40% of all image uploads.",
+      "Mentor two interns on SEO initiatives; rated an exceptional performer in the latest review cycle.",
     ],
   },
   {
@@ -37,10 +77,9 @@ export const experiences = [
     title: "Software Development Engineer 1 - Frontend",
     href: "https://www.smallcase.com",
     bullets: [
-      "Built the payments modal experience behind 65% of company revenue through strong frontend architecture and microservices integration.",
-      "Refactored complex codebases and added automations that improved maintainability and developer productivity.",
-      "Delivered B2C UI improvements in Next.js and TypeScript that improved user experience and conversion outcomes.",
-      "Recognized as a leading performer with a 50% compensation hike.",
+      "Prime contributor to the payments modal on a leading retail-investment platform, powering checkout for ~65% of company revenue by integrating multiple microservices into a seamless, robust payment flow.",
+      "Refactored complex legacy codebases and added automations, improving performance, readability, and developer productivity while reducing technical debt.",
+      "Recognized among the organization's leading performers of the year.",
     ],
   },
   {
@@ -49,8 +88,7 @@ export const experiences = [
     title: "Frontend Engineer Intern",
     href: "https://www.smallcase.com",
     bullets: [
-      "Designed and implemented scalable frontend architecture for a B2B business using Next.js.",
-      "Improved performance using code splitting, lazy loading, and caching for better load times and UX.",
+      "Designed scalable Next.js architecture for the B2B business, and improved page-load times through code splitting, lazy loading, and caching.",
     ],
   },
   {
@@ -59,8 +97,7 @@ export const experiences = [
     title: "Frontend Engineer Intern",
     href: "https://www.euromonitor.com",
     bullets: [
-      "Developed a ticket management application in React.js and improved its functionality and user experience.",
-      "Finished as one of the top performers with a cumulative score of 34/35.",
+      "Built a ticket-management application in React.js; rated a top performer with a cumulative score of 34/35.",
     ],
   },
   {
@@ -69,9 +106,7 @@ export const experiences = [
     title: "Founding Engineering Intern",
     href: "https://aidronesoftware.com",
     bullets: [
-      "Built responsive web applications in React.js with a strong focus on user experience.",
-      "Implemented UI improvements with Bootstrap to elevate the visual quality of product surfaces.",
-      "Received a 75% stipend hike for strong performance.",
+      "Developed responsive React.js web applications as one of the first engineers on the team.",
     ],
   },
 ] as const;
@@ -92,8 +127,9 @@ export const stackGroups = [
 ] as const;
 
 export const achievements = [
-  "Meta Frontend & App Professional Certification",
-  "Scaler Frontend Certificate with 1st rank in a batch of 150 students",
+  "Meta Frontend & App Professional Certification (12 months)",
+  "Scaler Frontend Certification - ranked 1st in a batch of 150 students",
+  "TOEFL iBT: 118/120 (2026)",
 ] as const;
 
 export const publications = [
@@ -126,11 +162,15 @@ export const packages = [
   },
 ] as const;
 
-export const education = {
-  school: "BITS Pilani",
-  degree: "Integrated Bachelor's and Master's degree",
-  subject: "Physics",
-  eyebrow: "Education",
-  description:
-    "Integrated Bachelor's and Master's degree.",
-} as const;
+export const education = [
+  {
+    eyebrow: "Master's",
+    school: "Woolf University",
+    details: ["MS, Computer Science"],
+  },
+  {
+    eyebrow: "Integrated Bachelor's & Master's",
+    school: "BITS Pilani",
+    details: ["Physics (Theoretical & Computational)"],
+  },
+] as const;

@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://somil-sharma.com"),
   title: "Somil Sharma | Frontend Engineer | React, Next.js, TypeScript",
   description:
-    "Somil Sharma is a frontend engineer in Gurgaon building fast web products with React, Next.js, TypeScript, HTML, and CSS. Open to strong frontend roles and product-focused teams.",
+    "Somil Sharma is a frontend engineer in Dehradun, India building 0→1 web products with React, Next.js, and TypeScript. CRM, payments, and web performance work for US-based product teams.",
   alternates: {
     canonical: "/",
   },
@@ -21,7 +21,10 @@ export const metadata: Metadata = {
     "HTML",
     "CSS",
     "Web Performance",
+    "Core Web Vitals",
     "Technical SEO",
+    "NestJS",
+    "Frontend Engineer Dehradun",
     "Frontend Engineer for hire",
     "React frontend engineer",
     "Next.js frontend engineer",

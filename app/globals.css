@@ -153,6 +153,7 @@ li {
 .section-heading > span,
 .system-card__eyebrow,
 .stack-group > span,
+.skill-card > span,
 .timeline-item > span {
   color: var(--accent);
   font-size: 0.78rem;
@@ -373,6 +374,45 @@ li {
   color: var(--muted);
   font-family: "IBM Plex Mono", "SFMono-Regular", "SF Mono", Consolas, monospace;
   font-size: 0.85rem;
+}
+
+.skill-groups {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  align-items: start;
+}
+
+.skill-card {
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+}
+
+.skill-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.skill-chips li {
+  padding: 6px 12px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 0.8rem;
+  letter-spacing: 0.03em;
+  line-height: 1.4;
+}
+
+@media (max-width: 1120px) {
+  .skill-groups {
+    grid-template-columns: 1fr;
+  }
 }
 
 .writing-grid {
